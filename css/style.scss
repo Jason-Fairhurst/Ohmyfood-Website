@@ -32,9 +32,24 @@ header {
 }
 
 footer {
-    color: $tertiary-bg-color;
     background-color: $quaternary-bg-color;
     padding: 22px 25px;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .Footer-text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 11px;
+
+        img {
+            height: 13px;
+        }
+    }
 }
 
 h2 {
@@ -52,9 +67,9 @@ h3 {
 }
 
 p {
-    font-size: 17px;
+    /*font-size: 17px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 300;*/
     margin: 0px;
 }
 
@@ -62,7 +77,7 @@ section {
     &.Instructions {
         /*width: 100%;
         margin: auto;*/
-        
+
         padding-top: 48px;
         padding-bottom: 68px;
         /*padding-left: 5%;*/
@@ -121,7 +136,8 @@ a {
         text-align: center;
         color: $quaternary-bg-color;
         font-size: 16px;
-        margin: 0px 0px 0px 17px;
+        font-weight: 500;
+        padding: 0px 0px 0px 17px;
     }
 }
 
@@ -131,13 +147,33 @@ a {
         font-size: 18px;
         font-style: normal;
         font-weight: 300;
+        padding: 0px 0px 27px 0px;
         color: var(--Grey, $quaternary-bg-color);
         text-align: center;
     }
 
     h2 {
-        margin: 0px 0px 18px 0px;
+        margin: 0px;
+        padding: 0px 0px 18px 0px;
         text-align: center;
+    }
+
+    .button {
+        display: block;
+        margin: auto;
+        height: 50px;
+        width: 218px;
+        border-radius: 25px;
+        background: var(--Button-Gradient, linear-gradient(193deg, $primary -11.44%, $secondary 123.93%));
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .button-text {
+        color: var(--White, #FFF);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        padding-top: 13px;
     }
 }
 
@@ -151,24 +187,68 @@ a {
         margin: 0px 0px 26px 0px;
     }
 
-    .card {
-        background-color: $primary-bg-color;
-        /*display: block;
-        margin: auto;*/
-        text-align: center;
-        height: 72px;
-        width: 322px;
-        margin-bottom: 24px;
-        border-radius: 20px;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    .Instructions-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
 
-        p {
-            padding: 28px 38px 28px 73px;
+    .Number-Card-group {
+
+        display: flex;
+        align-items: center;
+
+        .Number {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background-color: $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .card {
+            background-color: $primary-bg-color;
+            display: flex;
+            align-items: center;
+            /*justify-content: center;*/
+            /*gap: 23px;*/
+            /*text-align: center;*/
+            height: 72px;
+            width: 322px;
+            /*margin-bottom: 24px;*/
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+            .card-text {
+                padding-left: 23px;
+                width: 211px;
+            }
+
+            img {
+                padding-left: 35px;
+            }
+
+            .mobileIcon {
+                height: 20px;
+            }
+
+            .listIcon {
+                height: 16px;
+            }
+
+            .stallIcon {
+                height: 18px;
+            }
         }
     }
 
     div {
-        width: 322px; /*change once circles added to card*/
+        width: 322px;
+        /*change once circles added to card*/
         margin: auto;
     }
 }
@@ -177,9 +257,15 @@ a {
 
 /******* Restaurants *******/
 .Restaurants {
-    article {
+    /*article {
         display: block;
         margin: auto;
+    }*/
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 18px;
     }
 
     h2 {
@@ -191,7 +277,6 @@ a {
         background-color: $tertiary-bg-color;
         border-radius: 15px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-        margin-bottom: 18px;
 
         img {
             object-fit: cover;
@@ -208,8 +293,8 @@ a {
 }
 
 
-
-@media screen and (min-width: 1024px){
+/*
+@media screen and (min-width: 1024px) {
     section {
         &.Booking {
             padding: 30px 0px;
@@ -222,13 +307,14 @@ a {
         }
     }
 
-    .Restaurants article {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 100px;
-        margin-bottom: 50px;
+
+    .Restaurants .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 50px;
+        column-gap: 100px;
     }
+
 
     .Instructions {
         &-cards {
@@ -239,7 +325,7 @@ a {
         }
 
         div {
-            width: 1014px; /*change once circles added to card*/
+            width: 1014px;
         }
     }
-}
+}*/

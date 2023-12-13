@@ -29,32 +29,50 @@
             <section class="Booking">
                 <h2>Book the meal you want</h2>
                 <p>Discover our carefully selected high-end restaurants</p>
+                <a href="#Restaurants">
+                    <div class="button">
+                        <p class="button-text">Explore our restaurants</p>
+                    </div>
+                </a>
             </section>
             <section class="Instructions">
                 <div>
                     <h2>How it works</h2>
                     <div class="Instructions-cards">
-                        <article>
+                        <article class="Number-Card-group">
+                            <div class="Number">
+                                <p>1</p>
+                            </div>
                             <div class="card">
-                                <p>Choose a restaurant</p>
+                                <img src="./images/Button_Icons/mobile.png" class="mobileIcon"
+                                    alt="Picture of a mobile phone">
+                                <p class="card-text">Choose a restaurant</p>
                             </div>
                         </article>
-                        <article>
+                        <article class="Number-Card-group">
+                            <div class="Number">
+                                <p>2</p>
+                            </div>
                             <div class="card">
-                                <p>Build your meal</p>
+                                <img src="./images/Button_Icons/list-ul.png" class="listIcon" alt="Picture of a list">
+                                <p class="card-text">Build your meal</p>
                             </div>
                         </article>
-                        <article>
+                        <article class="Number-Card-group">
+                            <div class="Number">
+                                <p>3</p>
+                            </div>
                             <div class="card">
-                                <p>Enjoy your meal at the restaurant</p>
+                                <img src="./images/Button_Icons/store.png" class="stallIcon" alt="Picture of a stall">
+                                <p class="card-text">Enjoy your meal at the restaurant</p>
                             </div>
                         </article>
                     </div>
                 </div>
             </section>
-            <section class="Restaurants">
+            <section class="Restaurants" id="Restaurants">
                 <h2>Restaurants</h2>
-                <article>
+                <article class="grid-container">
                     <div class="card">
                         <a href="#">
                             <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -78,8 +96,7 @@
                             </div>
                         </a>
                     </div>
-                </article>
-                <article>
+
                     <div class="card">
                         <a href="#">
                             <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -110,11 +127,29 @@
 
         <footer>
             <img class="logo" src="./images/logo/ohmyfood.png" alt="ohmyfood Logo">
-            <section>
-                <p>Suggest a restaurant</p>
-                <p>Become a partner</p>
-                <p>Legal notice</p>
-                <p>Contact</p>
+            <section class="Footer-resource-links">
+                <a href="#">
+                    <div class="Footer-text">
+                        <img src="./images/Button_Icons/cutlery.png" alt="Picture of knife and fork">
+                        <p>Suggest a restaurant</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="Footer-text">
+                        <img src="./images/Button_Icons/hands.png" alt="Picture of two hands shaking">
+                        <p>Become a partner</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="Footer-text">
+                        <p>Legal notice</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="Footer-text">
+                        <p>Contact</p>
+                    </div>
+                </a>
             </section>
         </footer>
     </div>
