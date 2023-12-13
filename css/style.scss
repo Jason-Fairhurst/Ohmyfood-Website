@@ -1,0 +1,245 @@
+/******* Colours *******/
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+
+$primary-bg-color: #F6F6F6;
+$secondary-bg-color: #EAEAEA;
+$tertiary-bg-color: white;
+$quaternary-bg-color: #353535;
+
+
+
+/******* General *******/
+* {
+    font-family: 'Roboto';
+}
+
+body {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: $primary-bg-color;
+}
+
+header {
+    background-color: $tertiary-bg-color;
+
+    >section:first-child {
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        position: relative;
+    }
+}
+
+footer {
+    color: $tertiary-bg-color;
+    background-color: $quaternary-bg-color;
+    padding: 22px 25px;
+}
+
+h2 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0px;
+    padding: 16px 0px 5px 13px;
+}
+
+p {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0px;
+}
+
+section {
+    &.Instructions {
+        /*width: 100%;
+        margin: auto;*/
+        
+        padding-top: 48px;
+        padding-bottom: 68px;
+        /*padding-left: 5%;*/
+    }
+
+    &.Booking {
+        padding-top: 39px;
+        padding-bottom: 57px;
+    }
+
+    &.Restaurants {
+        width: 90%;
+        margin: auto;
+        padding-top: 54px;
+        padding-bottom: 66px;
+    }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.main-container {
+    width: 100%;
+}
+
+.screenSize {
+    min-width: 320px;
+    /*max-width: 1440px;*/
+}
+
+
+
+/******* Head *******/
+.logo {
+    display: block;
+    margin: auto;
+    align-self: center;
+    width: 200px;
+    padding: 14px 0px;
+}
+
+.location {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-bg-color;
+
+    img {
+        height: 16px;
+    }
+
+    h1 {
+        text-align: center;
+        color: $quaternary-bg-color;
+        font-size: 16px;
+        margin: 0px 0px 0px 17px;
+    }
+}
+
+/******* Booking *******/
+.Booking {
+    p {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        color: var(--Grey, $quaternary-bg-color);
+        text-align: center;
+    }
+
+    h2 {
+        margin: 0px 0px 18px 0px;
+        text-align: center;
+    }
+}
+
+
+
+/******* Instructions *******/
+.Instructions {
+    background-color: $tertiary-bg-color;
+
+    h2 {
+        margin: 0px 0px 26px 0px;
+    }
+
+    .card {
+        background-color: $primary-bg-color;
+        /*display: block;
+        margin: auto;*/
+        text-align: center;
+        height: 72px;
+        width: 322px;
+        margin-bottom: 24px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+        p {
+            padding: 28px 38px 28px 73px;
+        }
+    }
+
+    div {
+        width: 322px; /*change once circles added to card*/
+        margin: auto;
+    }
+}
+
+
+
+/******* Restaurants *******/
+.Restaurants {
+    article {
+        display: block;
+        margin: auto;
+    }
+
+    h2 {
+        margin: 0px 0px 28px 0px;
+    }
+
+    .card {
+        width: 100%;
+        background-color: $tertiary-bg-color;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        margin-bottom: 18px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 231px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        p {
+            padding: 0px 0px 12px 13px;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 1024px){
+    section {
+        &.Booking {
+            padding: 30px 0px;
+        }
+
+        &.Restaurants {
+            width: 75%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    .Restaurants article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        margin-bottom: 50px;
+    }
+
+    .Instructions {
+        &-cards {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        div {
+            width: 1014px; /*change once circles added to card*/
+        }
+    }
+}
