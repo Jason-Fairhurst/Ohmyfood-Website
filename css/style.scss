@@ -25,6 +25,17 @@ body {
 header {
     background-color: $tertiary-bg-color;
 
+    .logo {
+        min-width: 200px;
+        max-width: 200px;
+        text-align: center;
+        font-family: Shrikhand;
+        font-size: 30px;
+        font-weight: 400;
+        margin: auto;
+        padding: 14px 0px;
+    }
+
     >section:first-child {
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
         position: relative;
@@ -34,13 +45,33 @@ header {
 footer {
     background-color: $quaternary-bg-color;
     padding: 22px 25px;
+    display: grid;
+    gap: 16px;
+
+    .logo {
+        min-width: 138px;
+        max-width: 138px;
+        font-family: 'Shrikhand', serif;
+        margin: 0px;
+        padding: 0px;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: left;
+    }
 
     a {
         text-decoration: none;
         color: white;
     }
 
-    .Footer-text {
+    .Footer-resource-links {
+        display: grid;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .Footer-text_logo {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -49,6 +80,26 @@ footer {
         img {
             height: 13px;
         }
+    }
+
+    .Suggest_restaurant {
+        min-width: 190px;
+        max-width: 190px;
+    }
+
+    .Partner {
+        min-width: 190px;
+        max-width: 190px;
+    }
+
+    .Legal {
+        min-width: 130px;
+        max-width: 130px;
+    }
+
+    .Contact {
+        min-width: 130px;
+        max-width: 130px;
     }
 }
 
@@ -67,20 +118,13 @@ h3 {
 }
 
 p {
-    /*font-size: 17px;
-    font-style: normal;
-    font-weight: 300;*/
     margin: 0px;
 }
 
 section {
     &.Instructions {
-        /*width: 100%;
-        margin: auto;*/
-
         padding-top: 48px;
         padding-bottom: 68px;
-        /*padding-left: 5%;*/
     }
 
     &.Booking {
@@ -113,14 +157,6 @@ a {
 
 
 /******* Head *******/
-.logo {
-    display: block;
-    margin: auto;
-    align-self: center;
-    width: 200px;
-    padding: 14px 0px;
-}
-
 .location {
     height: 50px;
     display: flex;
@@ -132,7 +168,7 @@ a {
         height: 16px;
     }
 
-    h1 {
+    &-text {
         text-align: center;
         color: $quaternary-bg-color;
         font-size: 16px;
@@ -169,7 +205,7 @@ a {
     }
 
     .button-text {
-        color: var(--White, #FFF);
+        color: white;
         text-align: center;
         font-size: 16px;
         font-weight: 500;
@@ -183,11 +219,16 @@ a {
 .Instructions {
     background-color: $tertiary-bg-color;
 
+    &-container {
+        width: 335px;
+        margin: auto;
+    }
+
     h2 {
         margin: 0px 0px 26px 0px;
     }
 
-    .Instructions-cards {
+    &-cards {
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -199,8 +240,10 @@ a {
         align-items: center;
 
         .Number {
-            height: 24px;
-            width: 24px;
+            min-height: 24px;
+            max-height: 24px;
+            min-width: 24px;
+            max-width: 24px;
             border-radius: 50%;
             background-color: $primary;
             display: flex;
@@ -208,22 +251,20 @@ a {
             align-items: center;
             color: white;
             font-size: 14px;
+            margin-right: -12px;
+            z-index: 1;
         }
 
         .card {
             background-color: $primary-bg-color;
             display: flex;
             align-items: center;
-            /*justify-content: center;*/
-            /*gap: 23px;*/
-            /*text-align: center;*/
             height: 72px;
             width: 322px;
-            /*margin-bottom: 24px;*/
             border-radius: 20px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
-            .card-text {
+            &-text {
                 padding-left: 23px;
                 width: 211px;
             }
@@ -245,22 +286,12 @@ a {
             }
         }
     }
-
-    div {
-        width: 322px;
-        /*change once circles added to card*/
-        margin: auto;
-    }
 }
 
 
 
 /******* Restaurants *******/
 .Restaurants {
-    /*article {
-        display: block;
-        margin: auto;
-    }*/
 
     .grid-container {
         display: grid;
@@ -277,6 +308,7 @@ a {
         background-color: $tertiary-bg-color;
         border-radius: 15px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        position: relative;
 
         img {
             object-fit: cover;
@@ -286,14 +318,34 @@ a {
             border-top-right-radius: 15px;
         }
 
-        p {
+        .Restaurants-location {
             padding: 0px 0px 12px 13px;
+        }
+
+        .new-button {
+            min-width: 80px;
+            max-width: 80px;
+            min-height: 30px;
+            max-height: 30px;
+            padding: 0px;
+            display: flex;
+            position: absolute;
+            top: 13px;
+            right: 12px;
+            border-radius: 2px;
+            background: $tertiary;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            color: var(--Green-Font, #008766);
+            text-align: center;
+            font-size: 14px;
+            align-items: center;
+            justify-content: center;
         }
     }
 }
 
 
-/*
+
 @media screen and (min-width: 1024px) {
     section {
         &.Booking {
@@ -324,8 +376,31 @@ a {
             gap: 24px;
         }
 
-        div {
-            width: 1014px;
+        &-container {
+            width: 1055px;
         }
     }
-}*/
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: end;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        min-height: 54px;
+        max-height: 54px;
+        gap: 16px;
+
+        .Footer-resource-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+
+        }
+
+        /*.logo {
+            align-self: end;
+        }*/
+
+    }
+}

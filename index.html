@@ -7,7 +7,9 @@
     <title>ohmyfood</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -15,12 +17,12 @@
     <div class="main-container screenSize">
         <header>
             <section>
-                <img class="logo" src="./images/logo/ohmyfood.png" alt="ohmyfood Logo">
+                <h1 class="logo">ohmyfood</h1>
             </section>
             <section>
                 <div class="location">
                     <img src="./images/location_Icon.png" alt="Location Icon">
-                    <h1>Islington, London</h1>
+                    <h2 class="location-text">Islington, London</h2>
                 </div>
             </section>
         </header>
@@ -36,7 +38,7 @@
                 </a>
             </section>
             <section class="Instructions">
-                <div>
+                <div class="Instructions-container">
                     <h2>How it works</h2>
                     <div class="Instructions-cards">
                         <article class="Number-Card-group">
@@ -75,23 +77,30 @@
                 <article class="grid-container">
                     <div class="card">
                         <a href="#">
-                            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                alt="Picture of Kitchen West">
+                            <div>
+                                <p class="new-button">New</p>
+                                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                    alt="Picture of Kitchen West">
+                            </div>
                             <div class="card-content">
                                 <div class="card-txt">
                                     <h3>Kitchen West</h3>
-                                    <p>Angel</p>
+                                    <p class="Restaurants-location">Angel</p>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="card">
                         <a href="#">
-                            <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Picture of Elderflower">
+                            <div>
+                                <p class="new-button">New</p>
+                                <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                    alt="Picture of Elderflower">
+                            </div>
                             <div class="card-content">
                                 <div class="card-txt">
                                     <h3>Elderflower</h3>
-                                    <p>Old Street</p>
+                                    <p class="Restaurants-location">Old Street</p>
                                 </div>
                             </div>
                         </a>
@@ -104,7 +113,7 @@
                             <div class="card-content">
                                 <div class="card-txt">
                                     <h3>Shoreditch Canteen</h3>
-                                    <p>Shoreditch</p>
+                                    <p class="Restaurants-location">Shoreditch</p>
                                 </div>
                             </div>
                         </a>
@@ -116,7 +125,7 @@
                             <div class="card-content">
                                 <div class="card-txt">
                                     <h3>The Bay Leaf</h3>
-                                    <p>Hoxton</p>
+                                    <p class="Restaurants-location">Hoxton</p>
                                 </div>
                             </div>
                         </a>
@@ -126,30 +135,30 @@
         </main>
 
         <footer>
-            <img class="logo" src="./images/logo/ohmyfood.png" alt="ohmyfood Logo">
+            <h1 class="logo">ohmyfood</h1>
             <section class="Footer-resource-links">
-                <a href="#">
-                    <div class="Footer-text">
+                <div class="Suggest_restaurant">
+                    <a href="#" class="Footer-text_logo">
                         <img src="./images/Button_Icons/cutlery.png" alt="Picture of knife and fork">
                         <p>Suggest a restaurant</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="Footer-text">
+                    </a>
+                </div>
+                <div class="Partner">
+                    <a href="#" class="Footer-text_logo">
                         <img src="./images/Button_Icons/hands.png" alt="Picture of two hands shaking">
                         <p>Become a partner</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="Footer-text">
+                    </a>
+                </div>
+                <div class="Legal">
+                    <a href="#" class="Footer-text_logo">
                         <p>Legal notice</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="Footer-text">
+                    </a>
+                </div>
+                <div class="Contact">
+                    <a href="#" class="Footer-text_logo">
                         <p>Contact</p>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </section>
         </footer>
     </div>
