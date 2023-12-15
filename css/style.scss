@@ -26,8 +26,8 @@ header {
     background-color: $tertiary-bg-color;
 
     .logo {
-        min-width: 200px;
-        max-width: 200px;
+        /*min-width: 200px;
+        max-width: 200px;*/
         text-align: center;
         font-family: Shrikhand;
         font-size: 30px;
@@ -114,7 +114,6 @@ h3 {
     font-style: normal;
     font-weight: 700;
     margin: 0px;
-    padding: 16px 0px 5px 13px;
 }
 
 p {
@@ -149,9 +148,13 @@ a {
     width: 100%;
 }
 
-.screenSize {
+.min-screenSize {
     min-width: 320px;
-    /*max-width: 1440px;*/
+}
+
+.max-screenSize {
+    max-width: 1440px;
+    margin: auto;
 }
 
 
@@ -310,7 +313,7 @@ a {
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
         position: relative;
 
-        img {
+        .Restaurants-picture {
             object-fit: cover;
             width: 100%;
             height: 231px;
@@ -320,6 +323,10 @@ a {
 
         .Restaurants-location {
             padding: 0px 0px 12px 13px;
+        }
+
+        .Restaurants-name {
+            padding: 16px 0px 5px 13px;
         }
 
         .new-button {
@@ -343,6 +350,113 @@ a {
         }
     }
 }
+
+.like-button {
+    min-width: 22px;
+    max-width: 22px;
+    min-height: 21px;
+    max-height: 21px;
+}
+
+/******* Menus *******/
+.banner {
+    object-fit: cover;
+    width: 100%;
+    min-height: 275px;
+    max-height: 275px;
+}
+
+.Restaurant-tab {
+    background-color: white;
+}
+
+.menu {
+    display: grid;
+    gap: 40px;
+    margin-top: -20px;
+    padding-bottom: 40px;
+    background-color: $primary-bg-color;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+    z-index: 1;
+
+    .name-like-group {
+        display: flex;
+        margin: auto;
+        padding-top: 34px;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 340px;
+        max-width: 340px;
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+    .Restaurants-name {
+        font-family: Shrikhand;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .course {
+        display: grid;
+        gap: 12px;
+
+        &-option {
+            margin: 0% 4%;
+            font-size: 16px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .underline {
+            width: 40px;
+            height: 3px;
+            margin-top: -8px;
+            margin-left: 4%;
+            border: 0px;
+            background-color:  $tertiary;
+            
+        }
+    }
+
+    .card {
+        background-color: $tertiary-bg-color;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: end;
+        justify-content: space-between;
+        padding: 15px;
+        height: 42px;
+        width: 90%;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+        .meal {
+            display: grid;
+            gap: 5px;
+        }
+
+        .primary-food {
+            font-weight: 500;
+        }
+
+        .accompaniment {
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -397,10 +511,6 @@ a {
             justify-content: start;
 
         }
-
-        /*.logo {
-            align-self: end;
-        }*/
 
     }
 }
