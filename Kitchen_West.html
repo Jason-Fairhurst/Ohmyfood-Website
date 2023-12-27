@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    /*.navigation:hover + .main-content {
+        animation: home-button 125ms forwards;
+
+    }
+
+    @keyframes home-button {
+        0% {
+            opacity: 1;
+        }
+
+        20% {
+            opacity: .9;
+        }
+
+        40% {
+            opacity: .8;
+        }
+
+        60% {
+            opacity: .7;
+        }
+
+        80% {
+            opacity: .6;
+        }
+
+        100% {
+            opacity: .5;
+        }
+    }*/
+
+    /*main {
+        opacity: 1;
+        transition: opacity 500ms;
+    }
+
+    main:hover {
+        opacity: 0;
+
+    }*/
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohmyfood - Kitchen West</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main-container min-screenSize">
+        <header>
+            <div class="logo-banner">
+                <a href="./index.html" class="home-button">
+                    <h1 class="logo">ohmyfood</h1>
+                </a>
+            </div>
+        </header>
+
+        <main class="Restaurant-tab">
+            <div class="navigation">
+                <a href="./index.html" class="back-button">
+                    <img src="./images/Button_Icons/GoBack.png" alt="Go back button">
+                </a>
+            </div>
+            <div class="main-content">
+                <div>
+                    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="banner"
+                        alt="Picture of Kitchen West">
+                </div>
+                <section class="menu max-screenSize">
+                    <div class="name-like-group">
+                        <h2 class="Restaurants-name">Kitchen West</h2>
+                        <input type="checkbox" class="like-button" alt="Picture of a 'heart' like button">
+                    </div>
+                    <article class="course">
+                        <h2 class="course-option">Starters</h2>
+                        <hr class="underline">
+                        <div class="card">
+                            <div class="meal">
+                                <h3 class="primary-food">Smoked salmon</h3>
+                                <p class="accompaniment">With beetroot and horseradish dressing</p>
+                            </div>
+                            <div class="price">
+                                <p>£25</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="meal">
+                                <h3 class="primary-food">Ham hock terrine</h3>
+                                <p class="accompaniment">With piccalilli</p>
+                            </div>
+                            <div class="price">
+                                <p>£35</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="meal">
+                                <h3 class="primary-food">Poached egg</h3>
+                                <p class="accompaniment">With asparagus and hollandaise</p>
+                            </div>
+                            <div class="price">
+                                <p>£20</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course">
+                        <h2 class="course-option">Mains</h2>
+                        <hr class="underline">
+                        <div class="card">
+                            <div class="meal">
+                                <h3 class="primary-food">Beef fillet with herb butter</h3>
+                                <p class="accompaniment">Served with a vegetable medley</p>
+                            </div>
+                            <div class="price">
+                                <p>£40</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="meal">
+                                <h3 class="primary-food">Braised oxtail cottage pie</h3>
+                                <p class="accompaniment">With black truffle and parsnip puree</p>
+                            </div>
+                            <div class="price">
+                                <p>£35</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="meal">
+                                <h3 class="primary-food">Fillet of turbot</h3>
+                                <p class="accompaniment">With citrus dressing</p>
+                            </div>
+                            <div class="price">
+                                <p>£44</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course">
+                        <h2 class="course-option">Desserts</h2>
+                        <hr class="underline">
+                        <div class="card">
+                            <div class="meal">
+                                <h3 class="primary-food">Treacle tart</h3>
+                                <p class="accompaniment">With Cornish clotted cream</p>
+                            </div>
+                            <div class="price">
+                                <p>£18</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="meal">
+                                <h3 class="primary-food">Lemon posset</h3>
+                                <p class="accompaniment">With shortbread biscuit</p>
+                            </div>
+                            <div class="price">
+                                <p>£22</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="meal">
+                                <h3 class="primary-food">Chocolate mousse</h3>
+                                <p class="accompaniment">With a hint of chili and a hazelnut tuile</p>
+                            </div>
+                            <div class="price">
+                                <p>£23</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <div class="button">
+                                <p class="button-text">Order</p>
+                            </div>
+                        </a>
+                    </article>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <h1 class="logo">ohmyfood</h1>
+            <section class="Footer-resource-links">
+                <div class="Suggest_restaurant">
+                    <a href="#" class="Footer-text_logo">
+                        <img src="./images/Button_Icons/cutlery.png" alt="Picture of knife and fork">
+                        <p>Suggest a restaurant</p>
+                    </a>
+                </div>
+                <div class="Partner">
+                    <a href="#" class="Footer-text_logo">
+                        <img src="./images/Button_Icons/hands.png" alt="Picture of two hands shaking">
+                        <p>Become a partner</p>
+                    </a>
+                </div>
+                <div class="Legal">
+                    <a href="#" class="Footer-text_logo">
+                        <p>Legal notice</p>
+                    </a>
+                </div>
+                <div class="Contact">
+                    <a href="#" class="Footer-text_logo">
+                        <p>Contact</p>
+                    </a>
+                </div>
+            </section>
+        </footer>
+    </div>
+</body>
+
+</html>
