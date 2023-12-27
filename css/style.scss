@@ -8,6 +8,13 @@ $secondary-bg-color: #EAEAEA;
 $tertiary-bg-color: white;
 $quaternary-bg-color: #353535;
 
+$btn-color: linear-gradient(355deg, $primary -11.44%, $secondary 123.93%);
+$btn-lighten: linear-gradient(355deg, lighten($primary, 5) -11.44%, lighten($secondary, 5) 123.93%);
+
+/******* Images *******/
+$Unfavourite: url('/images/Button_Icons/Like-blank.png');
+$Favourite: url('/images/Button_Icons/Like-colour.png');
+
 
 
 /******* General *******/
@@ -25,15 +32,24 @@ body {
 header {
     background-color: $tertiary-bg-color;
 
-    .logo {
-        /*min-width: 200px;
-        max-width: 200px;*/
+    .logo-banner {
+
+        display: flex;
+        align-items: center;
         text-align: center;
-        font-family: Shrikhand;
-        font-size: 30px;
-        font-weight: 400;
+        padding: 14px 17px;
+
+        .logo {
+            margin: 0px;
+            font-family: Shrikhand;
+            font-size: 30px;
+            font-weight: 400;
+
+        }
+    }
+
+    .home-button {
         margin: auto;
-        padding: 14px 0px;
     }
 
     >section:first-child {
@@ -110,9 +126,6 @@ h2 {
 }
 
 h3 {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
     margin: 0px;
 }
 
@@ -203,8 +216,12 @@ a {
         height: 50px;
         width: 218px;
         border-radius: 25px;
-        background: var(--Button-Gradient, linear-gradient(193deg, $primary -11.44%, $secondary 123.93%));
+        background: $btn-color;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .button:hover {
+        background: $btn-lighten;
     }
 
     .button-text {
@@ -242,7 +259,7 @@ a {
         display: flex;
         align-items: center;
 
-        .Number {
+        .Number-container {
             min-height: 24px;
             max-height: 24px;
             min-width: 24px;
@@ -252,10 +269,14 @@ a {
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
-            font-size: 14px;
             margin-right: -12px;
             z-index: 1;
+        }
+
+        .Number {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
         }
 
         .card {
@@ -326,6 +347,7 @@ a {
         }
 
         .Restaurants-name {
+            font-size: 18px;
             padding: 16px 0px 5px 13px;
         }
 
@@ -348,15 +370,30 @@ a {
             align-items: center;
             justify-content: center;
         }
+
+        .like-button {
+            content: $Unfavourite;
+            appearance: none;
+            display: block;
+            position: absolute;
+            margin: 0px;
+            bottom: 33px;
+            right: 25px;
+            min-width: 22px;
+            max-width: 22px;
+            min-height: 21px;
+            max-height: 21px;
+            cursor: pointer;
+        }
+
+        .like-button:checked {
+            content: $Favourite;
+        }
+
     }
 }
 
-.like-button {
-    min-width: 22px;
-    max-width: 22px;
-    min-height: 21px;
-    max-height: 21px;
-}
+
 
 /******* Menus *******/
 .banner {
@@ -368,6 +405,12 @@ a {
 
 .Restaurant-tab {
     background-color: white;
+
+    .back-button {
+        position: absolute;
+        top: 19px;
+        left: 17px;
+    }
 }
 
 .menu {
@@ -380,6 +423,22 @@ a {
     border-top-left-radius: 20px;
     position: relative;
     z-index: 1;
+
+    .like-button {
+        content: $Unfavourite;
+        appearance: none;
+        display: block;
+        margin: 0px;
+        min-width: 22px;
+        max-width: 22px;
+        min-height: 21px;
+        max-height: 21px;
+        cursor: pointer;
+    }
+
+    .like-button:checked {
+        content: $Favourite;
+    }
 
     .name-like-group {
         display: flex;
@@ -416,8 +475,8 @@ a {
             margin-top: -8px;
             margin-left: 4%;
             border: 0px;
-            background-color:  $tertiary;
-            
+            background-color: $tertiary;
+
         }
     }
 
@@ -447,6 +506,28 @@ a {
             font-size: 15px;
             font-weight: 300;
         }
+    }
+
+    .button {
+        display: block;
+        margin: auto;
+        height: 50px;
+        width: 218px;
+        border-radius: 25px;
+        background: $btn-color;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .button:hover {
+        background: $btn-lighten;
+    }
+
+    .button-text {
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        padding-top: 13px;
     }
 
 }
