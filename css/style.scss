@@ -24,9 +24,9 @@ $Favourite: url('/images/Button_Icons/Like-colour.png');
     margin: 0;
     position: relative;
     overflow: hidden;
-  }
+}
 
-  .like-color {
+.like-color {
     z-index: 1;
     min-width: 22px;
     max-width: 22px;
@@ -35,9 +35,9 @@ $Favourite: url('/images/Button_Icons/Like-colour.png');
     position: absolute;
     top: 0;
     left: 0;
-  }
+}
 
-  .like-outline {
+.like-outline {
     z-index: 3;
     min-width: 22px;
     max-width: 22px;
@@ -46,10 +46,10 @@ $Favourite: url('/images/Button_Icons/Like-colour.png');
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 1200ms ease-in-out;
-  }
+    transition: opacity 1000ms ease-in-out;
+}
 
-  .blank {
+.blank {
     z-index: 2;
     min-width: 22px;
     max-width: 22px;
@@ -60,10 +60,10 @@ $Favourite: url('/images/Button_Icons/Like-colour.png');
     left: 0;
     transform: scaleY(1);
     transform-origin: 50% top;
-    transition: transform 1000ms ease-in-out;
-  }
+    transition: transform 800ms ease-in-out;
+}
 
-  .like-button {
+.like-button {
     z-index: 4;
     min-width: 22px;
     max-width: 22px;
@@ -75,11 +75,11 @@ $Favourite: url('/images/Button_Icons/Like-colour.png');
     top: 0;
     left: 0;
     cursor: pointer;
-  }
+}
 
-  .like-button:checked {
+.like-button:checked {
     content: $Favourite;
-  }
+}
 
 
 
@@ -151,6 +151,11 @@ footer {
         display: grid;
         align-items: center;
         gap: 7px;
+    }
+
+    .Footer-links {
+        width: auto;
+        display: inline-block;
     }
 
     .Footer-text_logo {
@@ -276,9 +281,13 @@ a {
         text-align: center;
     }
 
+    .button-centre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .button {
-        display: block;
-        margin: auto;
         height: 50px;
         width: 218px;
         border-radius: 25px;
@@ -526,20 +535,28 @@ a {
     }
 
     .card {
-        background-color: $tertiary-bg-color;
-        display: flex;
-        flex-direction: row;
+        background-color: #fff;
+        display: -webkit-inline-box;
         margin: auto;
-        align-items: end;
-        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
         padding: 15px;
         height: 42px;
         width: 90%;
         border-radius: 20px;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, .15);
+
+        &:hover .meal {
+            width: calc(100% - 60px);
+        }
 
         .meal {
-            display: grid;
+            display: flex;
+            flex-direction: column;
+            float: left;
+            padding-right: 15px;
+            width: 100%;
+            transition: width 250ms ease-in-out;
             gap: 5px;
         }
 
@@ -547,15 +564,51 @@ a {
             font-weight: 500;
         }
 
+        .accompaniment-price {
+            display: flex;
+            justify-content: space-between;
+        }
+
         .accompaniment {
             font-size: 15px;
             font-weight: 300;
         }
+
+        .select {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -15px;
+            max-width: 60px;
+            min-width: 60px;
+            max-height: 72px;
+            min-height: 72px;
+            background: $tertiary;
+
+            .check {
+                background: white;
+                color: $tertiary;
+                font-weight: 900;
+                max-width: 20px;
+                min-width: 20px;
+                max-height: 20px;
+                min-height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+    }
+
+    .button-centre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .button {
-        display: block;
-        margin: auto;
         height: 50px;
         width: 218px;
         border-radius: 25px;
@@ -581,21 +634,16 @@ a {
 
 
 
-
-
-
-
-
 @media screen and (min-width: 1024px) {
     .favourite:hover .like-outline {
         opacity: 0.2;
-    
-      }
-    
-      .favourite:hover .blank {
+
+    }
+
+    .favourite:hover .blank {
         transform: scaleY(0);
-    
-      }
+
+    }
 
     section {
         &.Booking {

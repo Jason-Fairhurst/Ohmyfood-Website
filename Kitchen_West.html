@@ -1,49 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    /*.navigation:hover + .main-content {
-        animation: home-button 125ms forwards;
-
-    }
-
-    @keyframes home-button {
-        0% {
-            opacity: 1;
-        }
-
-        20% {
-            opacity: .9;
-        }
-
-        40% {
-            opacity: .8;
-        }
-
-        60% {
-            opacity: .7;
-        }
-
-        80% {
-            opacity: .6;
-        }
-
-        100% {
-            opacity: .5;
-        }
-    }*/
-
-    /*main {
-        opacity: 1;
-        transition: opacity 500ms;
-    }
-
-    main:hover {
-        opacity: 0;
-
-    }*/
-</style>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,9 +38,8 @@
                     <div class="name-like-group">
                         <h2 class="Restaurants-name">Kitchen West</h2>
                         <div class="favourite">
-                            <input type="checkbox" class="like-button" alt="Picture of a 'heart' like button">
-                            <img class="like-color" src="./images/Button_Icons/Like-colour.png"
-                                alt="Coloured heart">
+                            <input type="checkbox" class="like-button">
+                            <img class="like-color" src="./images/Button_Icons/Like-colour.png" alt="Coloured heart">
                             <img class="like-outline" src="./images/Button_Icons/Like-blank.png"
                                 alt="Outline of a heart">
                             <div class="blank"></div>
@@ -95,28 +51,37 @@
                         <div class="card">
                             <div class="meal">
                                 <h3 class="primary-food">Smoked salmon</h3>
-                                <p class="accompaniment">With beetroot and horseradish dressing</p>
+                                <div class="accompaniment-price">
+                                    <p class="accompaniment">With beetroot and horseradish dressing</p>
+                                    <p class="price">£25</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>£25</p>
+                            <div class="select">
+                                <p class="check">&#10003;</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="meal">
                                 <h3 class="primary-food">Ham hock terrine</h3>
-                                <p class="accompaniment">With piccalilli</p>
+                                <div class="accompaniment-price">
+                                    <p class="accompaniment">With piccalilli</p>
+                                    <p class="price">£35</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>£35</p>
+                            <div class="select">
+                                <p class="check">&#10003;</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="meal">
                                 <h3 class="primary-food">Poached egg</h3>
-                                <p class="accompaniment">With asparagus and hollandaise</p>
+                                <div class="accompaniment-price">
+                                    <p class="accompaniment">With asparagus and hollandaise</p>
+                                    <p class="price">£20</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>£20</p>
+                            <div class="select">
+                                <p class="check">&#10003;</p>
                             </div>
                         </div>
                     </article>
@@ -126,28 +91,37 @@
                         <div class="card">
                             <div class="meal">
                                 <h3 class="primary-food">Beef fillet with herb butter</h3>
-                                <p class="accompaniment">Served with a vegetable medley</p>
+                                <div class="accompaniment-price">
+                                    <p class="accompaniment">Served with a vegetable medley</p>
+                                    <p class="price">£40</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>£40</p>
+                            <div class="select">
+                                <p class="check">&#10003;</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="meal">
                                 <h3 class="primary-food">Braised oxtail cottage pie</h3>
-                                <p class="accompaniment">With black truffle and parsnip puree</p>
+                                <div class="accompaniment-price">
+                                    <p class="accompaniment">With black truffle and parsnip puree</p>
+                                    <p class="price">£35</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>£35</p>
+                            <div class="select">
+                                <p class="check">&#10003;</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="meal">
                                 <h3 class="primary-food">Fillet of turbot</h3>
-                                <p class="accompaniment">With citrus dressing</p>
+                                <div class="accompaniment-price">
+                                    <p class="accompaniment">With citrus dressing</p>
+                                    <p class="price">£44</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>£44</p>
+                            <div class="select">
+                                <p class="check">&#10003;</p>
                             </div>
                         </div>
                     </article>
@@ -157,37 +131,48 @@
                         <div class="card">
                             <div class="meal">
                                 <h3 class="primary-food">Treacle tart</h3>
-                                <p class="accompaniment">With Cornish clotted cream</p>
+                                <div class="accompaniment-price">
+                                    <p class="accompaniment">With Cornish clotted cream</p>
+                                    <p class="price">£18</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>£18</p>
+                            <div class="select">
+                                <p class="check">&#10003;</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="meal">
                                 <h3 class="primary-food">Lemon posset</h3>
-                                <p class="accompaniment">With shortbread biscuit</p>
+                                <div class="accompaniment-price">
+                                    <p class="accompaniment">With shortbread biscuit</p>
+                                    <p class="price">£22</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>£22</p>
+                            <div class="select">
+                                <p class="check">&#10003;</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="meal">
                                 <h3 class="primary-food">Chocolate mousse</h3>
-                                <p class="accompaniment">With a hint of chili and a hazelnut tuile</p>
+                                <div class="accompaniment-price">
+                                    <p class="accompaniment">With a hint of chili and a hazelnut tuile</p>
+                                    <p class="price">£23</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>£23</p>
+                            <div class="select">
+                                <p class="check">&#10003;</p>
                             </div>
                         </div>
                     </article>
                     <article>
-                        <a href="#">
-                            <div class="button">
-                                <p class="button-text">Order</p>
-                            </div>
-                        </a>
+                        <div class="button-centre">
+                            <a href="#">
+                                <div class="button">
+                                    <p class="button-text">Order</p>
+                                </div>
+                            </a>
+                        </div>
                     </article>
                 </section>
             </div>
@@ -197,25 +182,33 @@
             <h1 class="logo">ohmyfood</h1>
             <section class="Footer-resource-links">
                 <div class="Suggest_restaurant">
-                    <a href="#" class="Footer-text_logo">
-                        <img src="./images/Button_Icons/cutlery.png" alt="Picture of knife and fork">
-                        <p>Suggest a restaurant</p>
+                    <a href="#" class="Footer-links">
+                        <div class="Footer-text_logo">
+                            <img src="./images/Button_Icons/cutlery.png" alt="Picture of knife and fork">
+                            <p>Suggest a restaurant</p>
+                        </div>
                     </a>
                 </div>
                 <div class="Partner">
-                    <a href="#" class="Footer-text_logo">
-                        <img src="./images/Button_Icons/hands.png" alt="Picture of two hands shaking">
-                        <p>Become a partner</p>
+                    <a href="#" class="Footer-links">
+                        <div class="Footer-text_logo">
+                            <img src="./images/Button_Icons/hands.png" alt="Picture of two hands shaking">
+                            <p>Become a partner</p>
+                        </div>
                     </a>
                 </div>
                 <div class="Legal">
-                    <a href="#" class="Footer-text_logo">
-                        <p>Legal notice</p>
+                    <a href="#" class="Footer-links">
+                        <div class="Footer-text_logo">
+                            <p>Legal notice</p>
+                        </div>
                     </a>
                 </div>
                 <div class="Contact">
-                    <a href="#" class="Footer-text_logo">
-                        <p>Contact</p>
+                    <a href="#" class="Footer-links">
+                        <div class="Footer-text_logo">
+                            <p>Contact</p>
+                        </div>
                     </a>
                 </div>
             </section>
