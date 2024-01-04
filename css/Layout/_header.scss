@@ -7,6 +7,8 @@ header {
         align-items: center;
         text-align: center;
         padding: 14px 17px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        position: relative;
 
         .logo {
             margin: 0px;
@@ -19,10 +21,5 @@ header {
 
     .home-button {
         margin: auto;
-    }
-
-    >section:first-child {
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-        position: relative;
     }
 }
