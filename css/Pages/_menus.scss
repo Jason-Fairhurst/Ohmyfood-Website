@@ -1,0 +1,171 @@
+/******* Menus Layout *******/
+.banner {
+    object-fit: cover;
+    width: 100%;
+    min-height: 275px;
+    max-height: 275px;
+}
+
+.Restaurant-tab {
+    background-color: white;
+
+}
+
+.menu {
+    display: grid;
+    gap: 40px;
+    margin-top: -20px;
+    padding-bottom: 40px;
+    background-color: $primary-bg-color;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+    z-index: 1;
+
+    .name-like-group {
+        display: flex;
+        margin: auto;
+        padding-top: 34px;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 355px;
+        max-width: 355px;
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+    .blank {
+        background-color: $primary-bg-color;
+    }
+
+    .Restaurants-name {
+        font-family: Shrikhand;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .course {
+        display: grid;
+        gap: 12px;
+
+        &-option {
+            margin: 0% 4%;
+            font-size: 16px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .underline {
+            width: 40px;
+            height: 3px;
+            margin-top: -8px;
+            margin-left: 4%;
+            border: 0px;
+            background-color: $tertiary;
+
+        }
+    }
+
+    .card {
+        background-color: #fff;
+        display: -webkit-inline-box;
+        margin: auto;
+        align-items: center;
+        overflow: hidden;
+        padding: 15px;
+        height: 42px;
+        width: 90%;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, .15);
+
+        &:hover .meal {
+            width: calc(100% - 60px);
+        }
+
+        .meal {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            padding-right: 15px;
+            width: 100%;
+            transition: width 250ms ease-in-out;
+            gap: 5px;
+        }
+
+        .primary-food {
+            font-weight: 500;
+        }
+
+        .accompaniment-price {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .accompaniment {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .select {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -15px;
+            max-width: 60px;
+            min-width: 60px;
+            max-height: 72px;
+            min-height: 72px;
+            background: $tertiary;
+
+            .check {
+                background: white;
+                color: $tertiary;
+                font-weight: 900;
+                max-width: 20px;
+                min-width: 20px;
+                max-height: 20px;
+                min-height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+    }
+}
+
+
+/******* Course Fade-in *******/
+.starters {
+    animation: fade 1500ms;
+    animation-delay: 0ms;
+    animation-fill-mode: both;
+}
+
+.mains {
+    animation: fade 1500ms;
+    animation-delay: 500ms;
+    animation-fill-mode: both;
+}
+
+.desserts {
+    animation: fade 1500ms;
+    animation-delay: 1000ms;
+    animation-fill-mode: both;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    23.333% {
+        opacity: 50%;
+    }
+
+    33.333% {
+        opacity: 100%;
+
+    }
+}

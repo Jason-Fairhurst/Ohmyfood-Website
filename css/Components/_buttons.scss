@@ -1,0 +1,107 @@
+/******* Like button *******/
+.favourite {
+    min-width: 22px;
+    max-width: 22px;
+    min-height: 21px;
+    max-height: 21px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.favourite:hover .like-outline {
+    opacity: 0.2;
+
+}
+
+.favourite:hover .blank {
+    transform: scaleY(0);
+
+}
+
+.like-color {
+    z-index: 1;
+    min-width: 22px;
+    max-width: 22px;
+    min-height: 21px;
+    max-height: 21px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.like-outline {
+    z-index: 3;
+    min-width: 22px;
+    max-width: 22px;
+    min-height: 21px;
+    max-height: 21px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1000ms ease-in-out;
+}
+
+.blank {
+    z-index: 2;
+    min-width: 22px;
+    max-width: 22px;
+    min-height: 21px;
+    max-height: 21px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(1);
+    transform-origin: 50% top;
+    transition: transform 800ms ease-in-out;
+}
+
+
+
+.like-button {
+    z-index: 4;
+    min-width: 22px;
+    max-width: 22px;
+    min-height: 21px;
+    max-height: 21px;
+    appearance: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.like-button:checked {
+    content: $Favourite;
+}
+
+
+
+/******* Booking/Menu button *******/
+.button-centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    height: 50px;
+    width: 218px;
+    border-radius: 25px;
+    background: $btn-color;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    
+    .button-text {
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+}
+
+.button:hover {
+    background: $btn-lighten;
+}

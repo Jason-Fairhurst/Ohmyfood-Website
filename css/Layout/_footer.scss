@@ -1,0 +1,90 @@
+footer {
+    background-color: $quaternary-bg-color;
+    padding: 22px 25px;
+    display: grid;
+    gap: 16px;
+
+    .logo {
+        min-width: 138px;
+        max-width: 138px;
+        font-family: 'Shrikhand', serif;
+        margin: 0px;
+        padding: 0px;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .Footer-resource-links {
+        display: grid;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .Footer-links {
+        width: auto;
+        display: inline-block;
+    }
+
+    .Footer-text_logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 11px;
+
+        img {
+            height: 13px;
+        }
+    }
+
+    .Suggest_restaurant {
+        min-width: 190px;
+        max-width: 190px;
+    }
+
+    .Partner {
+        min-width: 190px;
+        max-width: 190px;
+    }
+
+    .Legal {
+        min-width: 130px;
+        max-width: 130px;
+    }
+
+    .Contact {
+        min-width: 130px;
+        max-width: 130px;
+    }
+}
+
+
+
+/******* Desktop layout *******/
+@media screen and (min-width: 1024px) {
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: end;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        min-height: 54px;
+        max-height: 54px;
+        gap: 16px;
+
+        .Footer-resource-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+
+        }
+
+    }
+}
