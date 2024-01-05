@@ -11,6 +11,11 @@
 
 }
 
+.max-menuSize {
+    max-width: 1024px;
+    margin: auto;
+}
+
 .menu {
     display: grid;
     gap: 40px;
@@ -134,6 +139,7 @@
 
     }
 }
+
 
 
 /******* Course Fade-in *******/
