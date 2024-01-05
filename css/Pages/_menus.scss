@@ -19,7 +19,7 @@
 .menu {
     background: $primary-bg-color;
     display: grid;
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-top: -20px;
     padding-bottom: 40px;
@@ -87,8 +87,10 @@
         overflow: hidden;
         position: relative;
 
-        &:hover .meal {
-            width: calc(100% - 120px);
+        @media screen and (min-width: 769px) {
+            &:hover .meal {
+                width: calc(100% - 120px);
+            }
         }
     
         .meal {
