@@ -17,11 +17,15 @@
 }
 
 .menu {
+    background: $primary-bg-color;
     display: grid;
-    gap: 40px;
+    width: 80%;
+    margin: auto;
     margin-top: -20px;
     padding-bottom: 40px;
-    background-color: $primary-bg-color;
+    padding-left: 4%;
+    padding-right: 4%;
+    gap: 40px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     position: relative;
@@ -51,10 +55,11 @@
 
     .course {
         display: grid;
+        margin: 0% 4%;
         gap: 12px;
-
+        
         &-option {
-            margin: 0% 4%;
+            
             font-size: 16px;
             font-weight: 300;
             text-transform: uppercase;
@@ -63,84 +68,100 @@
         .underline {
             width: 40px;
             height: 3px;
-            margin-top: -8px;
-            margin-left: 4%;
+            margin-top: -20px;
+            margin-left: 0;
             border: 0px;
             background-color: $tertiary;
-
         }
     }
 
     .card {
         background-color: #fff;
-        display: -webkit-inline-box;
-        margin: auto;
+        display: flex;
         align-items: center;
-        overflow: hidden;
         padding: 15px;
         height: 42px;
         width: 90%;
         border-radius: 20px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, .15);
+        overflow: hidden;
+        position: relative;
 
-        @media screen and (min-width: 769px) {
-            &:hover .meal {
-                width: calc(100% - 60px);
-            }
+        &:hover .meal {
+            width: calc(100% - 120px);
         }
-
+    
         .meal {
             display: flex;
             flex-direction: column;
-            float: left;
-            padding-right: 15px;
             width: 100%;
-            transition: width 250ms ease-in-out;
             gap: 5px;
+            transition: width 250ms ease-in-out;
         }
+    }
 
-        .primary-food {
-            font-weight: 500;
-        }
+    .primary-food {
+        font-weight: 500;
+    }
 
-        .accompaniment-price {
-            display: flex;
-            justify-content: space-between;
-        }
+    .accompaniment-price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-        .accompaniment {
-            font-size: 15px;
-            font-weight: 300;
-        }
+    .accompaniment-price {
+        display: flex;
+        justify-content: space-between;
+    }
 
-        .select {
+    .price {
+        position: relative;
+        right: -50px;
+    }
+
+    .select {
+        display: flex;
+        position: relative;
+        right: -75px;
+        align-items: center;
+        justify-content: center;
+        max-width: 60px;
+        min-width: 60px;
+        max-height: 72px;
+        min-height: 72px;
+        background: $tertiary;
+
+        .check {
+            background: white;
+            color: $tertiary;
+            font-weight: 900;
+            max-width: 20px;
+            min-width: 20px;
+            max-height: 20px;
+            min-height: 20px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: -15px;
-            max-width: 60px;
-            min-width: 60px;
-            max-height: 72px;
-            min-height: 72px;
-            background: $tertiary;
-
-            .check {
-                background: white;
-                color: $tertiary;
-                font-weight: 900;
-                max-width: 20px;
-                min-width: 20px;
-                max-height: 20px;
-                min-height: 20px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
         }
-
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
