@@ -10,16 +10,6 @@
 
 }
 
-.favourite:hover .like-outline {
-    opacity: 0.2;
-
-}
-
-.favourite:hover .blank {
-    transform: scaleY(0);
-
-}
-
 .like-color {
     z-index: 1;
     min-width: 22px;
@@ -57,24 +47,16 @@
     transition: transform 800ms ease-in-out;
 }
 
+@media screen and (min-width: 769px) {
+    .favourite:hover .like-outline {
+        opacity: 0.2;
 
+    }
 
-.like-button {
-    z-index: 4;
-    min-width: 22px;
-    max-width: 22px;
-    min-height: 21px;
-    max-height: 21px;
-    appearance: none;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-}
+    .favourite:hover .blank {
+        transform: scaleY(0);
 
-.like-button:checked {
-    content: $Favourite;
+    }
 }
 
 
@@ -92,7 +74,7 @@
     border-radius: 25px;
     background: $btn-color;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    
+
     .button-text {
         color: white;
         text-align: center;
