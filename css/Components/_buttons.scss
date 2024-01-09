@@ -84,6 +84,8 @@
     }
 }
 
-.button:hover {
-    background: $btn-lighten;
+@media screen and (min-width: 769px) {
+    .button:hover {
+        background: $btn-lighten;
+    }
 }
