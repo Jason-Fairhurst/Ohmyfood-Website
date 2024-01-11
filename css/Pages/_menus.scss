@@ -56,9 +56,9 @@
         display: grid;
         margin: auto;
         gap: 12px;
-        
+
         &-option {
-            
+
             font-size: 16px;
             font-weight: 300;
             text-transform: uppercase;
@@ -87,15 +87,14 @@
 
         @media screen and (min-width: 769px) {
             &:hover .meal {
-                width: calc(100% - 120px);
+                width: calc(100% - 60px);
             }
         }
-    
+
         .meal {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             width: 100%;
-            gap: 5px;
             transition: width 250ms ease-in-out;
         }
     }
@@ -104,22 +103,33 @@
         font-weight: 500;
     }
 
-    .accompaniment-price {
+    .food-accompaniment {
+        width: 90%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .accompaniment {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         font-weight: 300;
     }
 
     .price {
-        position: relative;
-        right: -50px;
+        width: 10%;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        font-weight: 300;
     }
 
     .select {
         display: flex;
         position: relative;
-        right: -75px;
+        margin-right: -60px;
+        right: -15px;
         align-items: center;
         justify-content: center;
         max-width: 60px;
@@ -146,37 +156,22 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /******* Course Fade-in *******/
 .starters {
-    animation: fade 1500ms;
+    animation: fade 3000ms;
     animation-delay: 0ms;
     animation-fill-mode: both;
 }
 
 .mains {
-    animation: fade 1500ms;
-    animation-delay: 500ms;
+    animation: fade 3000ms;
+    animation-delay: 1000ms;
     animation-fill-mode: both;
 }
 
 .desserts {
-    animation: fade 1500ms;
-    animation-delay: 1000ms;
+    animation: fade 3000ms;
+    animation-delay: 2000ms;
     animation-fill-mode: both;
 }
 
