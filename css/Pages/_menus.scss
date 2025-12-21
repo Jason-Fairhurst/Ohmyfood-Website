@@ -85,17 +85,15 @@
         overflow: hidden;
         position: relative;
 
-        @media screen and (min-width: 769px) {
-            &:hover .meal {
-                width: calc(100% - 60px);
-            }
-        }
-
         .meal {
             display: flex;
             flex-direction: row;
             width: 100%;
-            transition: width 250ms ease-in-out;
+        }
+
+        .meal.add-item {
+            animation-name: show-Checked;
+            animation-duration: 2s;
         }
     }
 
@@ -128,7 +126,7 @@
     .select {
         display: flex;
         position: relative;
-        margin-right: -60px;
+        /*margin-right: -60px;*/
         right: -15px;
         align-items: center;
         justify-content: center;
@@ -137,6 +135,19 @@
         max-height: 72px;
         min-height: 72px;
         background: $tertiary;
+        cursor: pointer;
+
+        &:hover .check {
+            color: $dark-tertiary;
+        }
+
+        &:hover {
+            background: $dark-tertiary;
+        }
+
+        /*&:hover .card { NEED TO USE JS FOR THIS
+            background-color: #f9f9f9;
+        }*/
 
         .check {
             background: white;
@@ -158,20 +169,20 @@
 
 /******* Course Fade-in *******/
 .starters {
-    animation: fade 3000ms;
+    animation: fade 1000ms;
     animation-delay: 0ms;
     animation-fill-mode: both;
 }
 
 .mains {
-    animation: fade 3000ms;
-    animation-delay: 1000ms;
+    animation: fade 1000ms;
+    animation-delay: 333ms;
     animation-fill-mode: both;
 }
 
 .desserts {
-    animation: fade 3000ms;
-    animation-delay: 2000ms;
+    animation: fade 1000ms;
+    animation-delay: 666ms;
     animation-fill-mode: both;
 }
 
@@ -189,3 +200,17 @@
 
     }
 }
+
+/*@keyframes show-Checked {
+    20% {
+        width: calc(100% - 60px);
+    }
+
+    80% {
+        width: calc(100% - 60px);
+    }
+
+    100% {
+        width: 100%;
+    }
+}*/

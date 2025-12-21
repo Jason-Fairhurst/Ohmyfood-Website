@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: loader 2000ms forwards;
+    animation: loader 1000ms forwards;
 
     @keyframes loader {
         40% {
@@ -288,7 +288,7 @@ section {
             border-radius: 2px;
             background: $tertiary;
             box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-            color: var(--Green-Font, #008766);
+            color: $tertiary-text;
             text-align: center;
             font-size: 14px;
             align-items: center;
