@@ -7,7 +7,7 @@
     position: fixed;
     z-index: 10;
     background-color: #F7F7F7;
-    display: flex;
+    display: none; //flex; //uncomment to add back in
     align-items: center;
     justify-content: center;
     animation: loader 1500ms forwards;
