@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "course-option": "Starter",
+        "name": "Smoked salmon",
+        "accompaniment": "With beetroot and horseradish dressing",
+        "price": 25
+    },
+    {
+        "id": 2,
+        "course-option": "Starter",
+        "name": "Ham hock terrine",
+        "accompaniment": "With piccalilli",
+        "price": 35
+    },
+    {
+        "id": 3,
+        "course-option": "Starter",
+        "name": "Poached egg",
+        "accompaniment": "With asparagus and hollandaise",
+        "price": 20
+    },
+    {
+        "id": 4,
+        "course-option": "Main",
+        "name": "Beef fillet with herb butter",
+        "accompaniment": "Served with a vegetable medley",
+        "price": 40
+    },
+    {
+        "id": 5,
+        "course-option": "Main",
+        "name": "Braised oxtail cottage pie",
+        "accompaniment": "With black truffle and parsnip purée",
+        "price": 35
+    },
+    {
+        "id": 6,
+        "course-option": "Main",
+        "name": "Fillet of turbot",
+        "accompaniment": "With citrus dressing",
+        "price": 44
+    },
+    {
+        "id": 7,
+        "course-option": "Dessert",
+        "name": "Treacle tart",
+        "accompaniment": "With Cornish clotted cream",
+        "price": 18
+    },
+    {
+        "id": 8,
+        "course-option": "Dessert",
+        "name": "Lemon posset",
+        "accompaniment": "With shortbread biscuit",
+        "price": 22
+    },
+    {
+        "id": 9,
+        "course-option": "Dessert",
+        "name": "Chocolate mousse",
+        "accompaniment": "With a hint of chili and a hazelnut tuile",
+        "price": 23
+    }
+]

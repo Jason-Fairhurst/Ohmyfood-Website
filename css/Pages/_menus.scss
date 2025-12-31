@@ -142,21 +142,17 @@
         background: $tertiary;
         cursor: pointer;
 
-        &:hover .check {
+        /*&:hover .check {
             color: $dark-tertiary;
         }
 
         &:hover {
             background: $dark-tertiary;
-        }
+        }*/
 
         &:active {
             background: $dark-tertiary;
         }
-
-        /*&:hover .card { NEED TO USE JS FOR THIS
-            background-color: #f9f9f9;
-        }*/
 
         .check {
             background: white;
@@ -181,6 +177,103 @@
         }
     }
 
+}
+
+/******* Cart *******/
+.cart-tab {
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    width: 80%;
+    background: $tertiary-bg-color;
+    border-left: 1px solid #d9d9d9;
+    position: fixed;
+    inset: 0 -80% 0 auto;
+    z-index: 100;
+    transition: transform 300ms ease-in-out;
+
+    h2 {
+        display: flex;
+        align-items: center;
+        margin: 0 5px;
+        font-family: Shrikhand;
+        font-size: 30px;
+        font-weight: 400;
+        border-bottom: 1px solid $cart-border;
+
+    }
+
+    .cart-btn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        button {
+            background: inherit;
+            border: 0;
+            border-top: 1px solid $cart-border;
+            border-right: 1px solid $cart-border;
+            cursor: pointer;
+            font-size: 16px;
+
+            &:hover {
+                background: $primary-bg-color;
+            }
+        }
+    }
+
+    .cart-list {
+        overflow: auto;
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 1fr 70px 85px;
+            align-items: center;
+            margin: 5px 10px;
+            border-bottom: 1px solid $cart-border;
+            padding: 10px 0;
+
+            .item-quant {
+                display: flex;
+                gap: 5px;
+                cursor: pointer;
+
+                span {
+                    display: inline-flex;
+                    background: $tertiary;
+                    color: $tertiary-bg-color;
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 25px;
+                    justify-content: center;
+                    align-items: center;
+                    user-select: none;
+                    font-weight: bold;
+                }
+
+                span:nth-child(2) {
+                    background: inherit;
+                    color: inherit;
+                }
+
+                span:nth-child(1):hover,
+                span:nth-child(3):hover {
+                    background: $dark-tertiary;
+                }
+            }
+        }
+    }
+
+}
+
+.showCart.cart-tab,
+.cart.showCart {
+    transform: translateX(-100%);
+}
+
+@media screen and (min-width: 500px) {
+    .cart-tab {
+        width: 400px;
+        inset: 0 -400px 0 auto;
+    }
 }
 
 

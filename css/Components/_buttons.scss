@@ -1,11 +1,13 @@
 /******* Like button *******/
 .favourite {
-    min-width: 22px;
-    max-width: 22px;
-    min-height: 21px;
-    max-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 26px;
+    max-width: 26px;
+    min-height: 26px;
+    max-height: 26px;
     margin: 0;
-    position: relative;
     overflow: hidden;
 
 }
@@ -14,11 +16,7 @@
     z-index: 1;
     min-width: 22px;
     max-width: 22px;
-    min-height: 21px;
-    max-height: 21px;
     position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .like-outline {
@@ -26,11 +24,7 @@
     cursor: pointer;
     min-width: 22px;
     max-width: 22px;
-    min-height: 21px;
-    max-height: 21px;
     position: absolute;
-    top: 0;
-    left: 0;
     transition: opacity 1000ms ease-in-out;
 }
 
@@ -38,11 +32,9 @@
     z-index: 2;
     min-width: 22px;
     max-width: 22px;
-    min-height: 21px;
-    max-height: 21px;
+    min-height: 22px;
+    max-height: 22px;
     position: absolute;
-    top: 0;
-    left: 0;
     transform: scaleY(1);
     transform-origin: 50% top;
     transition: transform 800ms ease-in-out;
