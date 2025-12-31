@@ -87,9 +87,11 @@
         .meal {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             min-width: 75%;
             max-width: 75%;
             padding: 15px 15px 10px 15px;
+            gap: 5px;
         }
 
         @media screen and (min-width: 500px) {
@@ -108,15 +110,15 @@
     .food-accompaniment {
         display: flex;
         flex-direction: column;
-        min-width: 90%;
-        max-width: 90%;
+        /*min-width: 90%;
+        max-width: 90%;*/
         gap: 5px;
     }
 
     .accompaniment {
-        white-space: nowrap;
+        /*white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
+        text-overflow: ellipsis;*/
         font-weight: 300;
     }
 
@@ -125,9 +127,8 @@
         align-items: end;
         justify-content: center;
         font-weight: 300;
-        min-width: calc(10% - 5px);
-        max-width: calc(10% - 5px);
-        padding-left: 5px;
+        /*min-width: calc(10% - 5px);
+        max-width: calc(10% - 5px);*/
     }
 
     .select {
@@ -167,6 +168,7 @@
             align-items: center;
             justify-content: center;
             user-select: none;
+            pointer-events: none;
         }
     }
 
@@ -186,37 +188,60 @@
     width: 80%;
     background: $tertiary-bg-color;
     border-left: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
     position: fixed;
-    inset: 0 -80% 0 auto;
-    z-index: 100;
+    inset: 72px -80% 0 auto;
+    z-index: 99;
     transition: transform 300ms ease-in-out;
 
-    h2 {
+    .cartHeader {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        margin: 0 5px;
-        font-family: Shrikhand;
-        font-size: 30px;
-        font-weight: 400;
+        margin: 0 15px;
+        padding: 0 5px;
         border-bottom: 1px solid $cart-border;
 
+        h2 {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-family: Shrikhand;
+            font-size: 30px;
+            font-weight: 400;
+
+        }
+
+        .cart-Close {
+            cursor: pointer;
+
+            .bar1,
+            .bar2 {
+                width: 21px;
+                height: 3px;
+                background-color: black;
+                margin: 3px 0;
+            }
+
+            .bar1 {
+                transform: translate(0, 3px) rotate(-45deg);
+            }
+
+            .bar2 {
+                transform: translate(0, -3px) rotate(45deg);
+            }
+        }
     }
 
     .cart-btn {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: center;
 
         button {
-            background: inherit;
             border: 0;
-            border-top: 1px solid $cart-border;
-            border-right: 1px solid $cart-border;
             cursor: pointer;
             font-size: 16px;
-
-            &:hover {
-                background: $primary-bg-color;
-            }
+            color: white;
         }
     }
 
@@ -228,8 +253,9 @@
             grid-template-columns: 1fr 70px 85px;
             align-items: center;
             margin: 5px 10px;
-            border-bottom: 1px solid $cart-border;
-            padding: 10px 0;
+            padding: 10px 5px;
+            gap: 5px;
+            border-bottom: 1px solid $cart-border;           
 
             .item-quant {
                 display: flex;
@@ -272,7 +298,7 @@
 @media screen and (min-width: 500px) {
     .cart-tab {
         width: 400px;
-        inset: 0 -400px 0 auto;
+        inset: 72px -400px 0 auto;
     }
 }
 

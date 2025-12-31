@@ -10,12 +10,10 @@ let listStarter = [];
 
 //Used for opening and closing the cart
 cartIcon.addEventListener('click', () => {
-    //cartIcon.classList.toggle('showCart');
     cartTab.classList.toggle('showCart');
 });
 
 cartClose.addEventListener('click', () => {
-    //cartIcon.classList.remove('showCart');
     cartTab.classList.remove('showCart');
 });
 

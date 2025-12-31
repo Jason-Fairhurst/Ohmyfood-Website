@@ -1,3 +1,11 @@
+.navigation {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: inherit;
+}
+
 .back-button {
     display: flex;
     align-items: center;
@@ -6,8 +14,12 @@
     height: 38px;
     width: 38px;
 
-    &:hover{
+    &:hover {
         background: $primary-bg-color;
+    }
+
+    img {
+        width: 100%;
     }
 }
 
@@ -22,12 +34,12 @@
     width: 38px;
     //transition: transform 300ms ease-in-out;
 
-    &:hover{
+    &:hover {
         background: $primary-bg-color;
     }
 
     img {
         width: 26px;
     }
-    
+
 }
