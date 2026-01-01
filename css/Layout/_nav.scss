@@ -22,24 +22,3 @@
         width: 100%;
     }
 }
-
-
-.cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 50%;
-    height: 38px;
-    width: 38px;
-    //transition: transform 300ms ease-in-out;
-
-    &:hover {
-        background: $primary-bg-color;
-    }
-
-    img {
-        width: 26px;
-    }
-
-}

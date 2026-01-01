@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "courseOption": "starters",
+        "name": "Tangy octopus tartare",
+        "accompaniment": "With orange zest",
+        "price": 25
+    },
+    {
+        "id": 2,
+        "courseOption": "starters",
+        "name": "Cream of root vegetable soup",
+        "accompaniment": "Carrot, parsnip, Jerusalem artichoke",
+        "price": 35
+    },
+    {
+        "id": 3,
+        "courseOption": "starters",
+        "name": "French onion soup",
+        "accompaniment": "With cheesy croutons",
+        "price": 20
+    },
+    {
+        "id": 4,
+        "courseOption": "mains",
+        "name": "Scallops",
+        "accompaniment": "With parsnip purée",
+        "price": 40
+    },
+    {
+        "id": 5,
+        "courseOption": "mains",
+        "name": "Pan-fried duck breast",
+        "accompaniment": "With crushed potatoes",
+        "price": 35
+    },
+    {
+        "id": 6,
+        "courseOption": "mains",
+        "name": "Roasted pigeon",
+        "accompaniment": "Served on gnocchi and vegetables",
+        "price": 44
+    },
+    {
+        "id": 7,
+        "courseOption": "desserts",
+        "name": "Forest fruit cheesecake",
+        "accompaniment": "With blackcurrant sorbet",
+        "price": 18
+    },
+    {
+        "id": 8,
+        "courseOption": "desserts",
+        "name": "Chocolate fondant",
+        "accompaniment": "With clotted cream",
+        "price": 22
+    },
+    {
+        "id": 9,
+        "courseOption": "desserts",
+        "name": "Crispy millefeuille",
+        "accompaniment": "With blueberries and almonds",
+        "price": 23
+    }
+]

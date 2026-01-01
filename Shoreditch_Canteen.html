@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ohmyfood - Shoreditch Canteen</title>
+    <title>ohmyfood - Kitchen West</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,13 +19,14 @@
             <div class="navigation">
                 <div class="logo-banner">
                     <a href="./index.html" class="back-button">
-                        <img src="./images/Button_Icons/GoBack.png" alt="Go back button">
+                        <img src="./images/Button_Icons/Home.png" alt="Home button">
                     </a>
                     <a href="./index.html" class="home-button">
                         <div class="logo">ohmyfood</div>
                     </a>
                     <div class="cart">
                         <img src="./images/Cart.png" alt="Shopping cart icon">
+                        <span class="iconCartSpan">0</span>
                     </div>
                 </div>
             </div>
@@ -47,135 +48,20 @@
                             <div class="blank"></div>
                         </div>
                     </div>
-                    <article class="course starters">
-                        <h2 class="course-option">Starters</h2>
-                        <hr class="underline">
-                        <div class="card">
-                            <div class="meal">
-                                <div class="food-accompaniment">
-                                    <h3 class="primary-food">Tangy octopus tartare</h3>
-                                    <p class="accompaniment">With orange zest</p>
-                                </div>
-                                <p class="price">£25</p>
-                            </div>
-                            <div class="select">
-                                <p class="check">+</p>
-                            </div>
+                </section>
+                <section class="cart-tab">
+                    <div class="cartHeader">
+                        <h2>Cart</h2>
+                        <div class="cart-Close">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
                         </div>
-                        <div class="card">
-                            <div class="meal">
-                                <div class="food-accompaniment">
-                                    <h3 class="primary-food">Cream of root vegetable soup</h3>
-                                    <p class="accompaniment">Carrot, parsnip, Jerusalem artichoke</p>
-                                </div>
-                                <p class="price">£35</p>
-                            </div>
-                            <div class="select">
-                                <p class="check">+</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="meal">
-                                <div class="food-accompaniment">
-                                    <h3 class="primary-food">French onion soup</h3>
-                                    <p class="accompaniment">With cheesy croutons</p>
-                                </div>
-                                <p class="price">£20</p>
-                            </div>
-                            <div class="select">
-                                <p class="check">+</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="course mains">
-                        <h2 class="course-option">Mains</h2>
-                        <hr class="underline">
-                        <div class="card">
-                            <div class="meal">
-                                <div class="food-accompaniment">
-                                    <h3 class="primary-food">Scallops</h3>
-                                    <p class="accompaniment">With parsnip purée</p>
-                                </div>
-                                <p class="price">£40</p>
-                            </div>
-                            <div class="select">
-                                <p class="check">+</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="meal">
-                                <div class="food-accompaniment">
-                                    <h3 class="primary-food">Pan-fried duck breast</h3>
-                                    <p class="accompaniment">With crushed potatoes</p>
-                                </div>
-                                <p class="price">£35</p>
-                            </div>
-                            <div class="select">
-                                <p class="check">+</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="meal">
-                                <div class="food-accompaniment">
-                                    <h3 class="primary-food">Roasted pigeon</h3>
-                                    <p class="accompaniment">Served on gnocchi and vegetables</p>
-                                </div>
-                                <p class="price">£44</p>
-                            </div>
-                            <div class="select">
-                                <p class="check">+</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="course desserts">
-                        <h2 class="course-option">Desserts</h2>
-                        <hr class="underline">
-                        <div class="card">
-                            <div class="meal">
-                                <div class="food-accompaniment">
-                                    <h3 class="primary-food">Forest fruit cheesecake</h3>
-                                    <p class="accompaniment">With blackcurrant sorbet</p>
-                                </div>
-                                <p class="price">£18</p>
-                            </div>
-                            <div class="select">
-                                <p class="check">+</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="meal">
-                                <div class="food-accompaniment">
-                                    <h3 class="primary-food">Chocolate fondant</h3>
-                                    <p class="accompaniment">With clotted cream</p>
-                                </div>
-                                <p class="price">£22</p>
-                            </div>
-                            <div class="select">
-                                <p class="check">+</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="meal">
-                                <div class="food-accompaniment">
-                                    <h3 class="primary-food">Crispy millefeuille</h3>
-                                    <p class="accompaniment">With blueberries and almonds</p>
-                                </div>
-                                <p class="price">£23</p>
-                            </div>
-                            <div class="select">
-                                <p class="check">+</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <div class="button-centre">
-                        <a href="#">
-                            <div class="button">
-                                <p class="button-text">Order</p>
-                            </div>
-                        </a>
                     </div>
-
+                    <div class="cart-list">
+                    </div>
+                    <div class="cart-btn">
+                        <button class="button cart-chkOut">Order</button>
+                    </div>
                 </section>
             </div>
         </main>
@@ -218,6 +104,6 @@
     </div>
 </body>
 
-<script src="favouriteButton.js"></script>
+<script src="cartFunctionality.js"></script>
 
 </html>

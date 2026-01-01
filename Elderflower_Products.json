@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "courseOption": "starters",
+        "name": "Brisket ravioli",
+        "accompaniment": "Served with truffle cream",
+        "price": 25
+    },
+    {
+        "id": 2,
+        "courseOption": "starters",
+        "name": "Beluga caviar",
+        "accompaniment": "Served on buckwheat blinis",
+        "price": 35
+    },
+    {
+        "id": 3,
+        "courseOption": "starters",
+        "name": "Lobster with pumpkin foam",
+        "accompaniment": "And orange zest",
+        "price": 20
+    },
+    {
+        "id": 4,
+        "courseOption": "starters",
+        "name": "Duck terrine",
+        "accompaniment": "Fig jam and toasted briochey",
+        "price": 35
+    },
+    {
+        "id": 5,
+        "courseOption": "mains",
+        "name": "Scallops",
+        "accompaniment": "On a bed of celeriac purée",
+        "price": 40
+    },
+    {
+        "id": 6,
+        "courseOption": "mains",
+        "name": "Pan-fried langoustine",
+        "accompaniment": "With sweet potato mash",
+        "price": 35
+    },
+    {
+        "id": 7,
+        "courseOption": "mains",
+        "name": "Braised oxtail",
+        "accompaniment": "With lemon-zested wild rice",
+        "price": 44
+    },
+    {
+        "id": 8,
+        "courseOption": "desserts",
+        "name": "Chocolate parfait",
+        "accompaniment": "With salted caramel ice cream",
+        "price": 18
+    },
+    {
+        "id": 9,
+        "courseOption": "desserts",
+        "name": "Deconstructed rum baba",
+        "accompaniment": "With lemon coulis",
+        "price": 22
+    },
+    {
+        "id": 10,
+        "courseOption": "desserts",
+        "name": "Lemon meringue pie",
+        "accompaniment": "Deconstructed",
+        "price": 23
+    }
+]

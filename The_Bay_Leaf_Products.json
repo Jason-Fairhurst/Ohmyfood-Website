@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "courseOption": "starters",
+        "name": "Tuna tartare",
+        "accompaniment": "With yuzu seasoning",
+        "price": 25
+    },
+    {
+        "id": 2,
+        "courseOption": "starters",
+        "name": "Crispy lobster bon-bon",
+        "accompaniment": "With a vegetable selection",
+        "price": 35
+    },
+    {
+        "id": 3,
+        "courseOption": "starters",
+        "name": "Creamy porcini soup",
+        "accompaniment": "With truffle shavings",
+        "price": 20
+    },
+    {
+        "id": 4,
+        "courseOption": "mains",
+        "name": "Herb roast chicken ",
+        "accompaniment": "With truffle cream",
+        "price": 40
+    },
+    {
+        "id": 5,
+        "courseOption": "mains",
+        "name": "Roasted lobster",
+        "accompaniment": "With seasonal vegetables",
+        "price": 35
+    },
+    {
+        "id": 6,
+        "courseOption": "mains",
+        "name": "Aberdeen Angus prime rib ",
+        "accompaniment": "With parsnip mash",
+        "price": 44
+    },
+    {
+        "id": 7,
+        "courseOption": "desserts",
+        "name": "Assortment of desserts",
+        "accompaniment": "With lime biscuit",
+        "price": 18
+    },
+    {
+        "id": 8,
+        "courseOption": "desserts",
+        "name": "Crème brulée",
+        "accompaniment": "With forest fruits",
+        "price": 22
+    },
+    {
+        "id": 9,
+        "courseOption": "desserts",
+        "name": "Tiramisu",
+        "accompaniment": "With hazelnuts",
+        "price": 23
+    }
+]

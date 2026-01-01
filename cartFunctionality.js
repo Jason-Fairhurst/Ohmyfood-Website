@@ -3,10 +3,13 @@ let cartTab = document.querySelector(".cart-tab");
 let cartClose = document.querySelector(".cart-Close");
 let listProductHTML = document.querySelector(".menu");
 let listCartHTML = document.querySelector(".cart-list");
-let listStarterHTML = document.querySelector(".starters");
+let iconCartSpan = document.querySelector(".iconCartSpan");
+let restaurantName = document.querySelector("h1").innerText.replace(" ", "_");
 
 let cart = [];
-let listStarter = [];
+let listAllItems = [];
+let courseOptions = [];
+let courseLookup = {};
 
 //Used for opening and closing the cart
 cartIcon.addEventListener('click', () => {
@@ -55,8 +58,8 @@ const addCartToHTML = () => {
             let newCart = document.createElement('div');
             newCart.classList.add('cart-item');
             newCart.dataset.id = cartItem.product_ID;
-            let positionProduct = listStarter.findIndex((value) => value.id == cartItem.product_ID);
-            let info = listStarter[positionProduct];
+            let positionProduct = listAllItems.findIndex((value) => value.id == cartItem.product_ID);
+            let info = listAllItems[positionProduct];
             newCart.innerHTML = `
                 <div class="item-name">
                     ${info.name}
@@ -73,41 +76,61 @@ const addCartToHTML = () => {
             listCartHTML.appendChild(newCart);
         })
     }
-    console.log("Number of items in the basket: " + totalItems);
+    iconCartSpan.innerHTML = totalItems;
 }
 
 const addCartToMemory = () => {
-    localStorage.setItem('Cart', JSON.stringify(cart));
+    localStorage.setItem(`${restaurantName}Cart`, JSON.stringify(cart));
 }
 
 
 //Add items to menu on load and remembers cart options
 const addDataToHTML = () => {
-    listStarterHTML.innerHTML = `
-        <h2 class="course-option">Starters</h2>
-        <hr class="underline">
-        `;
-    if (listStarter.length > 0) {
-        listStarter.forEach(product => {
-            let newProduct = document.createElement('div');
-            newProduct.classList.add('card');
-            newProduct.dataset.id = product.id;
-            newProduct.innerHTML = `
-            <div class="meal">
-                <div class="food-accompaniment">
-                    <h3 class="primary-food">${product.name}</h3>
-                    <p class="accompaniment">${product.accompaniment}</p>
-                </div>
-                <p class="price">£${product.price}</p>
-            </div>
-            <div class="select">
-                <p class="check">+</p>
-            </div>
-            `;
-            listStarterHTML.appendChild(newProduct);
+    if (listAllItems.length > 0) {
+        //Gets a list of all courseOptions
+        for (let i = 0; i < listAllItems.length; i++) {
+            var name = listAllItems[i].courseOption;
+            if (!(name in courseLookup)) {
+                courseLookup[name] = 1;
+                courseOptions.push(name);
+            }
+        }
 
+        courseOptions.forEach(course => {
+            listProductHTML.innerHTML += `
+            <article class="course ${course}">
+            </article>
+            `;
+            let listCourseHTML = document.querySelector(`.${course}`);
+            listCourseHTML.innerHTML = `
+            <h2 class="course-option">${course}</h2>
+            <hr class="underline">
+            `;
+            listAllItems.forEach(product => {
+                if (product.courseOption == course) {
+                    let newProduct = document.createElement('div');
+                    newProduct.classList.add('card');
+                    newProduct.dataset.id = product.id;
+                    newProduct.innerHTML = `
+                    <div class="meal">
+                        <div class="food-accompaniment">
+                            <h3 class="primary-food">${product.name}</h3>
+                            <p class="accompaniment">${product.accompaniment}</p>
+                        </div>
+                        <p class="price">£${product.price}</p>
+                    </div>
+                    <div class="select">
+                        <p class="check">+</p>
+                    </div>
+                    `;
+                    listCourseHTML.appendChild(newProduct);
+
+                }
+            });
         });
+        likeButtonAnimation();
     }
+
 }
 
 listCartHTML.addEventListener('click', (event) => {
@@ -145,18 +168,37 @@ const changeQuantity = (product_ID, cartQuantChangeType) => {
 }
 
 const initApp = () => {
-    fetch('products.json')
+    fetch(`${restaurantName}_Products.json`)
         .then(response => response.json())
         .then(data => {
-            listStarter = data;
+            listAllItems = data;
             addDataToHTML();
 
             //Get cart from memory
-            if (localStorage.getItem('Cart')) {
-                cart = JSON.parse(localStorage.getItem('Cart'));
-                addCartToHTML();
+            if (localStorage.getItem(`${restaurantName}Cart`)) {
+                cart = JSON.parse(localStorage.getItem(`${restaurantName}Cart`));
             }
         });
 }
 
 initApp();
+
+//Like button function
+function likeButtonAnimation() {
+    // Select all like Buttons
+    let likeButtons = document.querySelectorAll('.like-outline');
+    
+    // Loop through each like button
+    likeButtons.forEach(likeButtons => {
+        // Add a click event listener to each question
+        likeButtons.addEventListener('click', () => {
+
+            // Toggle fade class when the like button is clicked
+            likeButtons.classList.toggle('like-outline-fade');
+            let blank = likeButtons.nextElementSibling;
+            if (blank) {
+                blank.classList.toggle("blank-tansformY");
+            }
+        });
+    });
+}
