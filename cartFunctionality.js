@@ -4,7 +4,7 @@ let cartClose = document.querySelector(".cart-Close");
 let listProductHTML = document.querySelector(".menu");
 let listCartHTML = document.querySelector(".cart-list");
 let iconCartSpan = document.querySelector(".iconCartSpan");
-let restaurantName = document.querySelector("h1").innerText.replace(" ", "_");
+let restaurantName = document.querySelector("h1").innerText.replaceAll(" ", "_");
 
 let cart = [];
 let listAllItems = [];
@@ -186,19 +186,16 @@ initApp();
 //Like button function
 function likeButtonAnimation() {
     // Select all like Buttons
-    let likeButtons = document.querySelectorAll('.like-outline');
-    
-    // Loop through each like button
-    likeButtons.forEach(likeButtons => {
-        // Add a click event listener to each question
-        likeButtons.addEventListener('click', () => {
+    let likeButtons = document.querySelector('.like-outline');
 
-            // Toggle fade class when the like button is clicked
-            likeButtons.classList.toggle('like-outline-fade');
-            let blank = likeButtons.nextElementSibling;
-            if (blank) {
-                blank.classList.toggle("blank-tansformY");
-            }
-        });
+    // Add a click event listener to each question
+    likeButtons.addEventListener('click', () => {
+
+        // Toggle fade class when the like button is clicked
+        likeButtons.classList.toggle('like-outline-fade');
+        let blank = likeButtons.nextElementSibling;
+        if (blank) {
+            blank.classList.toggle("blank-tansformY");
+        }
     });
 }
