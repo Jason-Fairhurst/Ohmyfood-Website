@@ -177,6 +177,7 @@ const initApp = () => {
             //Get cart from memory
             if (localStorage.getItem(`${restaurantName}Cart`)) {
                 cart = JSON.parse(localStorage.getItem(`${restaurantName}Cart`));
+                addCartToHTML();
             }
         });
 }
