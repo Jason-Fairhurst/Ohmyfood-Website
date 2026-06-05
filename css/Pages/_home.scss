@@ -305,9 +305,17 @@ section {
             background-color: $tertiary-bg-color;
         }
 
+        .RestaurantsLink {
+            display: block;
+            height: 100%;
+
+            &:focus {
+                outline: 1px solid $font-color;
+            }
+        }
+
     }
 }
-
 
 
 /******* Desktop layout *******/

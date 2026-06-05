@@ -11,6 +11,9 @@ $secondary-bg-color: #EAEAEA;
 $tertiary-bg-color: white;
 $quaternary-bg-color: #353535;
 
+$font-color: black;
+$font-color-inverse: white;
+
 $btn-color: linear-gradient(355deg, $primary -11.44%, $secondary 123.93%);
 $btn-lighten: linear-gradient(355deg, lighten($primary, 5) -11.44%, lighten($secondary, 5) 123.93%);
 

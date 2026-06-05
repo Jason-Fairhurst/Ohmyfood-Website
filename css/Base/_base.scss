@@ -1,6 +1,11 @@
 /******* General *******/
 * {
     font-family: 'Roboto';
+    color: $font-color;
+}
+
+*:focus {
+    outline: 1px dashed $font-color;
 }
 
 body {
@@ -22,10 +27,11 @@ h3 {
 
 p {
     margin: 0px;
+        color: inherit;
 }
 
 a {
-    color: black;
+    color: $font-color;
     text-decoration: none;
 }
 

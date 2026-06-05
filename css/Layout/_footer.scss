@@ -5,8 +5,8 @@ footer {
     gap: 16px;
 
     .logo {
-        min-width: 138px;
-        max-width: 138px;
+        min-width: 100px;
+        max-width: 100px;
         font-family: 'Shrikhand', serif;
         margin: 0px;
         padding: 0px;
@@ -18,7 +18,11 @@ footer {
 
     a {
         text-decoration: none;
-        color: white;
+        color: $font-color-inverse;
+
+        &:focus {
+            outline: 1px dashed $font-color-inverse;
+        }
     }
 
     .Footer-resource-links {
@@ -37,6 +41,7 @@ footer {
         flex-direction: row;
         align-items: center;
         gap: 11px;
+        color: inherit;
 
         img {
             height: 13px;

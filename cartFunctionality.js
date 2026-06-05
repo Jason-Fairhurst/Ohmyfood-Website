@@ -15,19 +15,30 @@ let courseLookup = {};
 cartIcon.addEventListener('click', () => {
     cartTab.classList.toggle('showCart');
 });
+cartIcon.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        cartTab.classList.toggle('showCart');
+    }
+});
 
 cartClose.addEventListener('click', () => {
     cartTab.classList.remove('showCart');
 });
-
+cartClose.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        cartTab.classList.remove('showCart');
+    }
+});
 
 //Adds items to cart
-listProductHTML.addEventListener('click', (event) => {
-    let foodItemClicked = event.target;
-    if (foodItemClicked.classList.contains('select')) {
-        let product_ID = foodItemClicked.parentElement.dataset.id;
-        addToCart(product_ID);
-    }
+['click', 'keypress'].forEach(evnt => {
+    listProductHTML.addEventListener(evnt, (event) => {
+        let foodItemClicked = event.target;
+        if (foodItemClicked.classList.contains('select')) {
+            let product_ID = foodItemClicked.parentElement.dataset.id;
+            addToCart(product_ID);
+        }
+    });
 });
 
 const addToCart = (product_ID) => {
@@ -68,9 +79,9 @@ const addCartToHTML = () => {
                     £${info.price * cartItem.quantity}
                 </div>
                 <div class="item-quant">
-                    <span class="quant-minus">-</span>
+                    <span class="quant-minus" tabindex="0">-</span>
                     <span>${cartItem.quantity}</span>
-                    <span class="quant-add">+</span>
+                    <span class="quant-add" tabindex="0">+</span>
                 </div>
             `;
             listCartHTML.appendChild(newCart);
@@ -119,7 +130,7 @@ const addDataToHTML = () => {
                         </div>
                         <p class="price">£${product.price}</p>
                     </div>
-                    <div class="select">
+                    <div class="select" tabindex="0">
                         <p class="check">+</p>
                     </div>
                     `;
@@ -133,17 +144,19 @@ const addDataToHTML = () => {
 
 }
 
-listCartHTML.addEventListener('click', (event) => {
-    let cartQuantChange = event.target;
-    if (cartQuantChange.classList.contains('quant-add') || cartQuantChange.classList.contains('quant-minus')) {
-        let product_ID = cartQuantChange.parentElement.parentElement.dataset.id;
-        let cartQuantChangeType = 'minus';
-        if (cartQuantChange.classList.contains('quant-add')) {
-            cartQuantChangeType = 'add';
+['click', 'keypress'].forEach(evnt => {
+    listCartHTML.addEventListener(evnt, (event) => {
+        let cartQuantChange = event.target;
+        if (cartQuantChange.classList.contains('quant-add') || cartQuantChange.classList.contains('quant-minus')) {
+            let product_ID = cartQuantChange.parentElement.parentElement.dataset.id;
+            let cartQuantChangeType = 'minus';
+            if (cartQuantChange.classList.contains('quant-add')) {
+                cartQuantChangeType = 'add';
+            }
+            changeQuantity(product_ID, cartQuantChangeType);
         }
-        changeQuantity(product_ID, cartQuantChangeType);
-    }
-})
+    });
+});
 
 const changeQuantity = (product_ID, cartQuantChangeType) => {
     let positionItemInCart = cart.findIndex((value) => value.product_ID == product_ID);
