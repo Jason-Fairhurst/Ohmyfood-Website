@@ -164,19 +164,22 @@ const changeQuantity = (product_ID, cartQuantChangeType) => {
         switch (cartQuantChangeType) {
             case 'add':
                 cart[positionItemInCart].quantity += 1;
+                document.querySelector(`[data-id='${product_ID}']`).querySelector('.item-quant').getElementsByTagName('span')[1].innerHTML = cart[positionItemInCart].quantity;
                 break;
 
             default:
                 let valueChange = cart[positionItemInCart].quantity - 1
                 if (valueChange > 0) {
                     cart[positionItemInCart].quantity = valueChange
+                    document.querySelector(`[data-id='${product_ID}']`).querySelector('.item-quant').getElementsByTagName('span')[1].innerHTML = cart[positionItemInCart].quantity;
                 } else {
                     cart.splice(positionItemInCart, 1);
+                    addCartToHTML();
                 }
                 break;
         }
     }
-    addCartToHTML();
+
     addCartToMemory();
 }
 

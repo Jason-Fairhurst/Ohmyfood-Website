@@ -233,7 +233,7 @@
 }
 
 .cart-tab {
-    display: grid;
+    display: none;
     grid-template-rows: 70px 1fr 70px;
     width: 80%;
     background: $tertiary-bg-color;
@@ -351,6 +351,7 @@
 
 .showCart.cart-tab,
 .cart.showCart {
+    display: grid; /*needs fixing so transitions*/
     transform: translateX(-100%);
 }
 
