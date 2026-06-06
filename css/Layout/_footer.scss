@@ -1,5 +1,5 @@
 footer {
-    background-color: $quaternary-bg-color;
+    background-color: $footer-bg-color;
     padding: 22px 25px;
     display: grid;
     gap: 16px;
@@ -34,6 +34,10 @@ footer {
     .Footer-links {
         width: auto;
         display: inline-block;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .Footer-text_logo {

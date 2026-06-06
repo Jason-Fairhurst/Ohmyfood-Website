@@ -108,7 +108,7 @@
 
     &-text {
         text-align: center;
-        color: $quaternary-bg-color;
+        color: $footer-bg-color;
         font-size: 16px;
         font-weight: 500;
         padding: 0px 0px 0px 17px;
@@ -145,7 +145,7 @@ section {
         font-style: normal;
         font-weight: 300;
         padding: 0px 0px 27px 0px;
-        color: var(--Grey, $quaternary-bg-color);
+        color: var(--Grey, $footer-bg-color);
         text-align: center;
     }
 
@@ -308,6 +308,7 @@ section {
         .RestaurantsLink {
             display: block;
             height: 100%;
+            border-radius: inherit;
 
             &:focus {
                 outline: 1px solid $font-color;

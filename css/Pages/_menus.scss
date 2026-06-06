@@ -116,9 +116,6 @@
     }
 
     .accompaniment {
-        /*white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;*/
         font-weight: 300;
     }
 
@@ -127,8 +124,6 @@
         align-items: end;
         justify-content: center;
         font-weight: 300;
-        /*min-width: calc(10% - 5px);
-        max-width: calc(10% - 5px);*/
     }
 
     .select {
@@ -152,13 +147,9 @@
             outline: 1px solid $font-color;
         }
 
-        /*&:hover .check {
-            color: $dark-tertiary;
-        }
-
         &:hover {
             background: $dark-tertiary;
-        }*/
+        }
 
         &:active {
             background: $dark-tertiary;
@@ -223,7 +214,7 @@
         right: -5px;
         height: 20px;
         width: 20px;
-        border-radius: 50%;
+        border-radius: inherit;
         background-color: red;
         color: white;
         font-size: 13px;
@@ -290,13 +281,6 @@
     .cart-btn {
         display: flex;
         justify-content: center;
-
-        button {
-            border: 0;
-            cursor: pointer;
-            font-size: 16px;
-            color: white;
-        }
     }
 
     .cart-list {
@@ -351,8 +335,9 @@
 
 .showCart.cart-tab,
 .cart.showCart {
-    display: grid; /*needs fixing so transitions*/
+    display: grid;
     transform: translateX(-100%);
+    /*Could update so it slides into position but tab functionality more important*/
 }
 
 @media screen and (min-width: 500px) {
