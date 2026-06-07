@@ -61,7 +61,7 @@
         &-option {
 
             font-size: 16px;
-            font-weight: 300;
+            font-weight: 400;
             text-transform: uppercase;
         }
 
@@ -178,9 +178,9 @@
             max-width: 80px;
 
             &:focus {
-            min-width: 79px;
-            max-width: 79px;
-        }
+                min-width: 79px;
+                max-width: 79px;
+            }
         }
     }
 
@@ -344,5 +344,41 @@
     .cart-tab {
         width: 400px;
         inset: 72px -400px 0 auto;
+    }
+}
+
+
+
+#cartNotification {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    right: calc(50% - 115px);
+    z-index: 1000;
+    width: 230px;
+    gap: 10px;
+}
+
+.cartNotificationPopup {
+    background-color: $dark-tertiary;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    text-align: center;
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
