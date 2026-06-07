@@ -231,9 +231,8 @@
     border-left: 1px solid #d9d9d9;
     border-top: 1px solid #d9d9d9;
     position: fixed;
-    inset: 72px -80% 0 auto;
+    inset: 72px 0 0 auto;
     z-index: 99;
-    transition: transform 300ms ease-in-out;
 
     .cartHeader {
         display: flex;
@@ -336,17 +335,19 @@
 .showCart.cart-tab,
 .cart.showCart {
     display: grid;
-    transform: translateX(-100%);
-    /*Could update so it slides into position but tab functionality more important*/
 }
 
 @media screen and (min-width: 500px) {
     .cart-tab {
         width: 400px;
-        inset: 72px -400px 0 auto;
     }
 }
 
+@media screen and (min-width: 1920px) {
+    .cart-tab {
+        inset: 72px calc((100% - 1920px) / 2) 0 auto;
+    }
+}
 
 
 #cartNotification {
