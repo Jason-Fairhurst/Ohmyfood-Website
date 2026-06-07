@@ -8,6 +8,7 @@
     margin: 0;
     overflow: hidden;
     border-radius: 50%;
+    user-select: none;
 
     &:focus {
         outline: 1px dashed $font-color;
